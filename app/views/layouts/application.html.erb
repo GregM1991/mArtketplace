@@ -11,9 +11,9 @@
 
   <body>
     <% if user_signed_in? %>
-      <%= link_to("Logout", destroy_user_session_path, method: :delete) %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to("Login/Signup", new_user_session_path) %>
+      <%= link_to "Login/Signup", new_user_session_path %>
     <% end %>
 
     <p class="notice"><%= notice %></p>
