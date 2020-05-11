@@ -1,0 +1,11 @@
+<h1>Showroom</h1>
+
+<div class="listing-wrapper">
+    <% for listing in @listings %>
+        <div class="listing">
+            <h3><%= listing.title %></h3>
+            <p><%= listing.description %></p>
+            <p><%= number_to_currency(listing.price) %></p>
+        </div>
+    <% end %>
+</div>
