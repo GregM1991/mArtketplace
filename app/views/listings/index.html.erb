@@ -3,7 +3,7 @@
 <div class="listing-wrapper">
     <% for listing in @listings %>
         <div class="listing">
-            <h3><%= listing.title %></h3>
+            <h3><%= link_to "#{listing.title}", listing_path(listing.id) %></h3>
             <p><%= listing.description %></p>
             <p><%= number_to_currency(listing.price) %></p>
             <p><%= listing.id %></p>
