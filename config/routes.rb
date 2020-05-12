@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get "/listings", to: "listings#index", as: "listings"
 
   get "/listings/new", to: "listings#new", as: "new_listing"
+
+  post "/listings", to: "listings#create"
+  get "/listings/:id", to: "listings#show", as: "listing"
 end

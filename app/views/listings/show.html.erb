@@ -1,0 +1,8 @@
+<h2><%= @listing.title %></h2>
+<p><%= @listing.description %></p>
+<p><%= number_to_currency(@listing.price) %></p>
+<% if @listing.picture.attached? %>
+    <%= image_tag @listing.picture, style: "width: 200px" %>
+<% end %>
+<br>
+Seller's email: <%= @listing.user.email %>
