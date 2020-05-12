@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get "/", to: "pages#home", as: "root" 
 
   get "/listings", to: "listings#index", as: "listings"
+
+  get "/listings/new", to: "listings#new", as: "new_listing"
 end
