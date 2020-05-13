@@ -6,3 +6,10 @@
 <% end %>
 <br>
 Seller's email: <%= @listing.user.email %>
+<% if current_user.id == @listing.user.id %>
+    <p><%= link_to "edit", edit_listing_path(@listing.id) %></p>
+    <%= form_with model: @listing, local: true, method: :delete do |form| %>
+        <%= submit_tag "delete" %>
+    <% end %>
+
+<% end %>
