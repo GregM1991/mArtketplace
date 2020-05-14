@@ -10,14 +10,22 @@
   </head>
 
   <body>
+    <div id="grid">
+      <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+    </div>
     <nav id="nav">
-      <img src="mArtketplace/designAssets/logoPNG.png" alt="mArtketplace logo">
+      <div class="logo">
+        <%= image_tag "logoPNG.png", alt: "mArtketplace's logo" %>
+      </div>
+      <div class="nav-links">
+        <% if user_signed_in? %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Login/Signup", new_user_session_path %>
+        <% end %>
+      </div>
     </nav>
-    <% if user_signed_in? %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Login/Signup", new_user_session_path %>
-    <% end %>
+    
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
