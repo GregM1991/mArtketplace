@@ -1,0 +1,31 @@
+<h1>Showroom</h1>
+
+<button data-stripe="donate">Donate $10</button>
+
+<div class="listing-wrapper">
+    <% for listing in @listings %>
+        <div class="listing">
+            <h3><%= link_to "#{listing.title}", listing_path(listing.id) %></h3>
+            <p><%= listing.description %></p>
+            <p><%= number_to_currency(listing.price) %></p>
+            <p>Listing id: <%= listing.id %></p>
+            <p>Posted by: <%= listing.user.email %></p>
+        </div>
+    <% end %>
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    document
+        .querySelector("[data-stripe='donate']")
+        .addEventListener("click", () => {
+            const stripe = Stripe(
+                "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+            );
+
+            stripe.redirectToCheckout({
+                sessionId: "<%= @session_id %>"
+            });
+        });
+</script>
+    
