@@ -17,7 +17,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;400;700&display=swap');
 
 /* ---------------------- 12 COLUMN GRID OVERLAY ---------------------- */
-#grid {
+/* #grid {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -35,9 +35,25 @@
 	background: rgb(222, 240, 255);
 	margin: 0;
 	opacity: 0.2;
-}
+} */
 
 /* ---------------------- GENERAL STYLING ---------------------- */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border: none;
+	-webkit-text-fill-color: #222;
+	-webkit-box-shadow: none;
+	transition: background-color 5000s ease-in-out 0s;
+	background-color: #fff5f5;
+}
 
 * {
 	box-sizing: border-box;
@@ -103,7 +119,7 @@ a {
 
 /* ---------------------- HOME STYLING ---------------------- */
 
-.grid-splash {
+.grid-container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: minmax(100px, auto);

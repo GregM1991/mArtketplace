@@ -80,8 +80,8 @@ class ListingsController < ApplicationController
         if @listing.errors.any?
             render template_name
         else
-            redirect_to listing_path
-        end
+            redirect_to @listing
+        end 
     end
 
 end
