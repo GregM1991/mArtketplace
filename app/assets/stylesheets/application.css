@@ -78,6 +78,11 @@ h6 {
 a {
 	text-decoration: none;
 	color: #222;
+	transition: 0.2s;
+}
+
+a:hover {
+	color: #ff878d;
 }
 
 /* ---------------------- NAVBAR STYLING ---------------------- */
@@ -123,19 +128,9 @@ a {
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: minmax(100px, auto);
+	grid-template-rows: auto;
 	grid-gap: 10px;
-}
-
-.splash-description {
-	grid-column: 3/10;
-	grid-row: 2;
-}
-
-.grid-splash h1 {
-	grid-column: 3/10;
-	grid-row: 2/3;
-	font-size: 3.5rem;
+	margin-bottom: 50px;
 }
 
 .splash-words {
@@ -144,10 +139,16 @@ a {
 	display: flex;
 	flex-direction: column;
 	font-size: 1.2rem;
+	font-weight: 100;
 }
 
 .splash-words a {
 	text-decoration: underline;
+	margin-top: 10px;
+}
+
+.splash-words p {
+	line-height: 1.8rem;
 }
 
 .splash-images {
