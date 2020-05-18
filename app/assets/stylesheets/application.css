@@ -17,7 +17,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;400;700&display=swap');
 
 /* ---------------------- 12 COLUMN GRID OVERLAY ---------------------- */
-/* #grid {
+#grid {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -35,7 +35,7 @@
 	background: rgb(222, 240, 255);
 	margin: 0;
 	opacity: 0.2;
-} */
+}
 
 /* ---------------------- GENERAL STYLING ---------------------- */
 
@@ -102,14 +102,15 @@ a {
 .nav-links {
 	display: flex;
 	align-items: center;
-	grid-column: 11/13;
+	grid-column: 10/13;
 	font-weight: 100;
 }
 
 .nav-links a {
-	padding: 15px 10px;
-	transition: .2s;
+	padding: 15px 20px;
+	transition: 0.2s;
 	border-radius: 12px;
+	margin: 5px;
 }
 
 .nav-links a:hover {

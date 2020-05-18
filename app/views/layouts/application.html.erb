@@ -15,9 +15,10 @@
     </div>
     <nav id="nav">
       <div class="logo">
-        <%= image_tag "logoPNGRed.png", alt: "mArtketplace's logo" %>
+        <a href="/"><%= image_tag "logoPNGRed.png", alt: "mArtketplace's logo" %></a>
       </div>
       <div class="nav-links">
+        <%= link_to "Showroom", listings_path %>
         <% if user_signed_in? %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
         <% else %>

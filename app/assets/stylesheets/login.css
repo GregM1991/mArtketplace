@@ -14,6 +14,10 @@
 	color: #ff878d;
 }
 
+.log-in-flex h2 {
+	font-size: 2.5rem;
+}
+
 .field input {
 	width: 100%;
 	border: none;
@@ -51,9 +55,12 @@ input[type="submit"] {
 	padding: 10px 20px;
 	border-radius: 8px;
 	transition: 0.2s;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.8rem;
+	font-weight: 100;
 }
 
 .remember-me button,
 input[type="submit"]:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
