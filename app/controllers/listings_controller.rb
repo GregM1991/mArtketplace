@@ -9,6 +9,7 @@ class ListingsController < ApplicationController
 
     def new
         @listing = Listing.new
+        generate_stripe_session
     end
 
     def create
@@ -35,6 +36,7 @@ class ListingsController < ApplicationController
 
     def show
         @listing = Listing.find(params[:id])
+        generate_stripe_session
     end
 
     def destroy
