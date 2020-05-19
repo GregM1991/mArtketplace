@@ -34,3 +34,14 @@
 .show-img img {
 	max-width: 100%;
 }
+
+@media (max-width: 766px) {
+	.show-copy {
+		grid-column: 2/12;
+		grid-row: 3;
+	}
+
+	.show-img {
+		grid-column: 2/12;
+	}
+}
