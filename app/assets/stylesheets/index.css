@@ -43,6 +43,7 @@
 	align-items: center;
 	font-size: 2rem;
 	font-weight: 400;
+	min-height: 100px;
 }
 
 .new-listing a {
