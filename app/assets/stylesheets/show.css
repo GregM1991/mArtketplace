@@ -1,0 +1,36 @@
+.show-copy {
+	display: flex;
+	flex-direction: column;
+	grid-column: 9/12;
+	font-size: .9rem;
+	font-weight: 100;
+}
+
+.button-wrap {
+	display: flex;
+	margin: 10px 0;
+}
+
+.button-wrap a {
+	background-color: #ff878d;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 8px;
+	transition: 0.2s;
+	width: auto;
+	font-size: 0.8rem;
+	margin-right: 10px;
+}
+
+.button-wrap a:hover {
+	transform: scale(1.05);
+}
+
+.show-img {
+	grid-column: 3/9;
+	grid-row: 1;
+}
+
+.show-img img {
+	max-width: 100%;
+}

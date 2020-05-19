@@ -10,14 +10,18 @@
   </head>
 
   <body>
-    <div id="grid">
+    <%# ---------- GRID OVERLAY ---------- %>
+    <%# <div id="grid">
       <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-    </div>
+    </div> %>
+
     <nav id="nav">
       <div class="logo">
-        <%= image_tag "logoPNG.png", alt: "mArtketplace's logo" %>
+        <a href="/"><%= image_tag "logoPNGRed.png", alt: "mArtketplace's logo" %></a>
       </div>
       <div class="nav-links">
+        <button data-stripe="donate">Donate</button>
+        <%= link_to "Showroom", listings_path %>
         <% if user_signed_in? %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
         <% else %>
@@ -25,10 +29,23 @@
         <% end %>
       </div>
     </nav>
-    
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        document
+            .querySelector("[data-stripe='donate']")
+            .addEventListener("click", () => {
+                const stripe = Stripe(
+                    "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+                );
+
+                stripe.redirectToCheckout({
+                    sessionId: "<%= @session_id %>"
+                });
+            });
+    </script>
   </body>
+  
 </html>

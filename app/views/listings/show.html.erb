@@ -1,15 +1,23 @@
-<h2><%= @listing.title %></h2>
-<p><%= @listing.description %></p>
-<p><%= number_to_currency(@listing.price) %></p>
-<% if @listing.picture.attached? %>
-    <%= image_tag @listing.picture, style: "width: 200px" %>
-<% end %>
-<br>
-Seller's email: <%= @listing.user.email %>
-<% if current_user.id == @listing.user.id %>
-    <p><%= link_to "edit", edit_listing_path(@listing.id) %></p>
-    <%= form_with model: @listing, local: true, method: :delete do |form| %>
-        <%= submit_tag "delete" %>
-    <% end %>
+<div class="grid-container">
+    <div class="show-copy">
+        <h2><%= @listing.title.capitalize %></h2>
+        <p><%= @listing.description %></p>
+        <p><%= number_to_currency(@listing.price) %></p>
+        <p>By: <em><%= @listing.user.email %></em><p>
+        <div class="button-wrap">
+            <% if current_user.id == @listing.user.id %>
+                <%= link_to "edit", edit_listing_path(@listing.id) %>
+                <%= form_with model: @listing, local: true, method: :delete do |form| %>
+                    <%= submit_tag "delete" %>
+                <% end %>
+            <% end %>        
+        </div>
 
-<% end %>
+    </div>
+    <div class="show-img">
+        <% if @listing.picture.attached? %>
+            <%= image_tag @listing.picture %>
+        <% end %>
+    </div>
+
+</div>

@@ -17,7 +17,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;400;700&display=swap');
 
 /* ---------------------- 12 COLUMN GRID OVERLAY ---------------------- */
-#grid {
+/* #grid {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -34,10 +34,26 @@
 #grid p {
 	background: rgb(222, 240, 255);
 	margin: 0;
-	opacity: 0.3;
-}
+	opacity: 0.2;
+} */
 
 /* ---------------------- GENERAL STYLING ---------------------- */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border: none;
+	-webkit-text-fill-color: #222;
+	-webkit-box-shadow: none;
+	transition: background-color 5000s ease-in-out 0s;
+	background-color: #fff5f5;
+}
 
 * {
 	box-sizing: border-box;
@@ -47,7 +63,7 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	color: #2a2a2a;
+	color: #222;
 }
 
 h1,
@@ -61,8 +77,23 @@ h6 {
 
 a {
 	text-decoration: none;
-	color: #2a2a2a;
+	color: #222;
+	transition: 0.2s;
 }
+
+a:hover {
+	color: #ff878d;
+}
+
+.donate-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+	font-size: 2.5rem;
+}
+
+/* ---------------------- NAVBAR STYLING ---------------------- */
 
 #nav {
 	display: grid;
@@ -78,11 +109,91 @@ a {
 }
 
 .logo img {
-	max-width: 100px;
+	max-width: 70px;
 }
 
 .nav-links {
 	display: flex;
 	align-items: center;
-	grid-column: 11/13;
+	grid-column: 9/13;
+	font-weight: 100;
+}
+
+.nav-links a {
+	padding: 15px 20px;
+	transition: 0.2s;
+	border-radius: 12px;
+	margin: 5px;
+}
+
+.nav-links button {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	margin: 5px;
+	border: none;
+	background-color: rgba(255, 135, 141, 0.0);
+	padding: 15px 20px;
+	color: #222;
+	font-family: sans-serif;
+	font-size: 1rem;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: 0.2s;
+	border-radius: 12px;
+}
+
+.nav-links button:hover {
+	background-color: rgba(255, 135, 141, 1);
+	color: #fff;
+}
+
+.nav-links a:hover {
+	background-color: #ff878d;
+	color: #fff;
+}
+
+/* ---------------------- HOME STYLING ---------------------- */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 10px;
+	margin-bottom: 50px;
+}
+
+.splash-words {
+	grid-column: 3/8;
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.2rem;
+	font-weight: 100;
+}
+
+.splash-words h1 {
+	display: block;
+	font-size: 4rem;
+}
+
+.splash-words a {
+	text-decoration: underline;
+	margin-top: 10px;
+}
+
+.splash-words p {
+	line-height: 1.8rem;
+}
+
+.splash-images {
+	display: flex;
+	flex-direction: column;
+	grid-column: 9/11;
+	grid-row: 2/5;
+}
+
+.splash-images img {
+	max-width: 100%;
+	padding-bottom: 10px;
 }

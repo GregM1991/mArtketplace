@@ -1,0 +1,68 @@
+.log-in-flex {
+	display: flex;
+	flex-direction: column;
+	grid-column: 5/9;
+	font-weight: 100;
+	font-size: 0.9rem;
+}
+
+.log-in-flex a {
+	transition: 0.2s;
+}
+
+.log-in-flex a:hover {
+	color: #ff878d;
+}
+
+.log-in-flex h2 {
+	font-size: 2.5rem;
+}
+
+.field input,
+textarea {
+	width: 100%;
+	border: none;
+	padding: 15px 0 5px 5px;
+	margin-top: 10px;
+	border-bottom: 1px solid #ff878d;
+	transition: 0.3s;
+}
+
+.field input,
+textarea:focus {
+	outline: none;
+	padding: 20px 0 5px 10px;
+	border-bottom: 1px solid #ffbdc0;
+	background-color: #fff5f5;
+}
+
+.remember-me {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+	margin-top: 10px;
+}
+
+.remember-me input {
+	width: auto;
+	margin: 0 5px 0 0;
+}
+
+.remember-me button,
+input[type="submit"] {
+	border: none;
+	background-color: #ff878d;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 8px;
+	transition: 0.2s;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.8rem;
+	font-weight: 100;
+}
+
+.remember-me button,
+input[type="submit"]:hover {
+	transform: scale(1.05);
+}
