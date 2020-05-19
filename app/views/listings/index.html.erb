@@ -19,19 +19,4 @@
         </div>        
     </div>
 </div>
-
-<script src="https://js.stripe.com/v3/"></script>
-<script>
-    document
-        .querySelector("[data-stripe='donate']")
-        .addEventListener("click", () => {
-            const stripe = Stripe(
-                "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
-            );
-
-            stripe.redirectToCheckout({
-                sessionId: "<%= @session_id %>"
-            });
-        });
-</script>
     
