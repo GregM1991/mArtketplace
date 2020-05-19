@@ -105,7 +105,7 @@ a:hover {
 .logo {
 	display: flex;
 	align-items: center;
-	grid-column: 2;
+	grid-column: 2/4;
 }
 
 .logo img {
@@ -114,8 +114,9 @@ a:hover {
 
 .nav-links {
 	display: flex;
+	justify-content: flex-end;
 	align-items: center;
-	grid-column: 9/13;
+	grid-column: -2/-10;
 	font-weight: 100;
 }
 
@@ -196,4 +197,91 @@ a:hover {
 .splash-images img {
 	max-width: 100%;
 	padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+	/* ---------------------- NAVBAR STYLING ---------------------- */
+
+	.form-flex {
+		grid-column: 2/12;
+	}
+
+	.log-in-flex {
+		grid-column: 2/12;
+	}
+
+	/* ---------------------- GENERAL STYLING ---------------------- */
+
+	.splash-words {
+		grid-column: 2/8;
+		grid-row: 2;
+		font-size: 1.1rem;
+	}
+	.splash-words h1 {
+		font-size: 3rem;
+	}
+
+	.splash-images {
+		grid-column: 8/12;
+	}
+}
+
+@media (max-width: 766px) {
+	/* ---------------------- NAVBAR STYLING ---------------------- */
+
+	.logo {
+		grid-column: 2;
+	}
+
+	.nav-links a {
+		padding: 5px 10px;
+	}
+
+	.nav-links button {
+		padding: 5px 10px;
+	}
+
+	/* ---------------------- GENERAL STYLING ---------------------- */
+
+	.splash-words {
+		grid-column: 2/12;
+		grid-row: 2;
+		font-size: 1.1rem;
+	}
+
+	.splash-words p {
+		line-height: 2rem;
+	}
+
+	.splash-images {
+		display: flex;
+		flex-direction: column;
+		grid-column: 2/12;
+		grid-row: 3;
+	}
+}
+
+@media (min-width: 1800px) {
+	.splash-words {
+		grid-column: 3/7;
+		font-size: 1.6rem;
+	}
+
+	.splash-words p {
+		line-height: 2.4rem;
+	}
+
+	.splash-images {
+		display: flex;
+		flex-direction: column;
+		grid-column: 8/10;
+	}
+
+	.logo {
+		grid-column: 3;
+	}
+
+	.nav-links {
+		grid-column: -3/-10;
+	}
 }

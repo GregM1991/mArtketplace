@@ -66,3 +66,15 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	transform: scale(1.05);
 }
+
+@media (max-width: 900px) {
+	.log-in-flex {
+		grid-column: 3/11;
+	}
+}
+
+@media (max-width: 766px) {
+	.log-in-flex {
+		grid-column: 2/12;
+	}
+}
