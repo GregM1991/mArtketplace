@@ -115,7 +115,7 @@ a:hover {
 .nav-links {
 	display: flex;
 	align-items: center;
-	grid-column: 9/13;
+	grid-column: 8/13;
 	font-weight: 100;
 }
 
@@ -196,4 +196,57 @@ a:hover {
 .splash-images img {
 	max-width: 100%;
 	padding-bottom: 10px;
+}
+
+/* ---------------------- MOBILE STYLING ---------------------- */
+
+@media (max-width: 900px) {
+	.nav-links {
+		grid-column: 6/12;
+	}
+
+	.form-flex {
+		grid-column: 2/12;
+	}
+
+	.log-in-flex {
+		grid-column: 2/12;
+	}
+}
+
+@media (max-width: 766px) {
+	.logo {
+		grid-column: 2;
+	}
+
+	.nav-links {
+		grid-column: 5/12;
+		font-size: 0.7rem;
+	}
+
+	.nav-links a {
+		padding: 5px 10px;
+	}
+
+	.nav-links button {
+		font-size: 0.7rem;
+		padding: 5px 10px;
+	}
+
+	.splash-words {
+		grid-column: 2/12;
+		grid-row: 2;
+		font-size: 1.8rem;
+	}
+
+	.splash-words p {
+		line-height: 2.8rem;
+	}
+
+	.splash-images {
+		display: flex;
+		flex-direction: column;
+		grid-column: 2/12;
+		grid-row: 3;
+	}
 }
