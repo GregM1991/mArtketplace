@@ -2,21 +2,22 @@
     <h1>Showroom</h1>
     <div class="inner-grid">
         <% for listing in @listings %>
+        <div class="listing-wrap">
             <div class="listing">
                 <% if listing.picture.attached? %>
-                    <%= image_tag listing.picture %>
+                <%= image_tag listing.picture %>
                 <% else %>
-                    <%= image_tag "https://via.placeholder.com/1000" %>
+                <%= image_tag "https://via.placeholder.com/1000" %>
                 <% end %>
-                <div class="listing-info">
-                    <h3><%= link_to "#{listing.title}", listing_path(listing.id) %></h3>                
-                    <p><%= number_to_currency(listing.price) %></p>                
-                </div>
             </div>
+            <div class="listing-info">
+                <h3><%= link_to "#{listing.title}", listing_path(listing.id) %></h3>
+                <p><%= number_to_currency(listing.price) %></p>
+            </div>
+        </div>
         <% end %>
         <div class="new-listing">
             <%= link_to 'Post a print + ', new_listing_path %>
-        </div>        
+        </div>
     </div>
 </div>
-    

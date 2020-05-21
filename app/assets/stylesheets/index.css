@@ -19,6 +19,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: #e0e0de;
+	justify-content: center;
+	height: 90%;
 }
 
 .listing-info {
@@ -29,6 +32,7 @@
 	height: 40px;
 	font-size: 1.2rem;
 	font-weight: 100;
+	background-color: #fff;
 }
 
 .listing-info h3 {
